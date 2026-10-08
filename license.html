@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ライセンス情報 | エイドロニア重工</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img class="logo" src="assets/logo.png" alt="Janus ロゴ">
+    <a class="brand" href="index.html">エイドロニア重工</a>
+  </div>
+</header>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html">トップ</a>
+    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="license.html" class="active">ライセンス情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<main>
+  <h1 class="page-title">サードパーティ ソフトウェア ライセンス情報</h1>
+  <p class="page-lede">
+    Janus - 重複動画ファインダーは、以下のオープンソース・ソフトウェアを同梱して
+    配布しています。各ソフトウェアの著作権は各権利者に帰属します。この内容は
+    アプリ内の「サードパーティライセンス」からも確認できます。
+  </p>
+
+  <section class="notice">
+    GPLv3・LGPLv3の条文全文は、Free Software Foundation公式サイトでご確認いただけます。<br>
+    GPLv3: <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank" rel="noopener">https://www.gnu.org/licenses/gpl-3.0.txt</a><br>
+    LGPLv3: <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" target="_blank" rel="noopener">https://www.gnu.org/licenses/lgpl-3.0.txt</a><br>
+    （アプリの配布物には、上記サイトから取得した条文全文のテキストファイルを同梱しています）
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">1. FFmpeg（動画のメタデータ取得・フレーム抽出に使用）</h3>
+    <table class="spec-table">
+      <tr><th>ライセンス</th><td>GNU Lesser General Public License version 3 (LGPLv3)</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2000-2026 the FFmpeg developers</td></tr>
+      <tr><th>配布形態</th><td>ffmpeg.exe（実行ファイルとして同梱。本体コードへの静的／動的リンクはせず、別プロセスとして呼び出すのみ）</td></tr>
+      <tr><th>出典</th><td>BtbN/FFmpeg-Builds（GitHub） ビルド "ffmpeg-n9.0-latest-win64-lgpl-9.0"<br>
+        <a href="https://github.com/BtbN/FFmpeg-Builds/releases" target="_blank" rel="noopener">https://github.com/BtbN/FFmpeg-Builds/releases</a></td></tr>
+      <tr><th>ソースコード入手先</th><td>
+        同梱バージョン（n9.0, ビルド日 2026-10-07）:<br>
+        <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest" target="_blank" rel="noopener">https://github.com/BtbN/FFmpeg-Builds/releases/tag/latest</a>
+        （"ffmpeg-n9.0-latest-win64-lgpl-9.0.zip" と同一ビルド）<br><br>
+        FFmpeg本体の公式ソースコードリポジトリ:<br>
+        <a href="https://ffmpeg.org/download.html" target="_blank" rel="noopener">https://ffmpeg.org/download.html</a><br><br>
+        FFmpeg-Buildsのビルドスクリプト（本ビルドの生成手順）:<br>
+        <a href="https://github.com/BtbN/FFmpeg-Builds" target="_blank" rel="noopener">https://github.com/BtbN/FFmpeg-Builds</a>
+      </td></tr>
+      <tr><th>備考</th><td>
+        `--enable-version3` かつ `--disable-libx264 --disable-libx265 --disable-libxavs2
+        --disable-libxvid` でビルドされており、GPL専用コンポーネントを一切含まない構成です。
+        本ソフトウェアはffmpegを動画のメタデータ取得・フレームのデコード（静止画抽出）にのみ
+        使用しており、エンコードは一切行いません。--onedir 配布形式のため、ffmpeg.exe は
+        独立した実行ファイルとして同梱されており、利用者が任意の互換ビルドに差し替えることが
+        可能です。
+      </td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">2. Qt for Python (PySide6 / PySide6-Essentials / PySide6-Addons / shiboken6)</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>6.11.2</td></tr>
+      <tr><th>ライセンス</th><td>GNU Lesser General Public License version 3 (LGPLv3)</td></tr>
+      <tr><th>著作権</th><td>Copyright (C) The Qt Company Ltd. and other contributors</td></tr>
+      <tr><th>出典</th><td><a href="https://www.qt.io/download-open-source" target="_blank" rel="noopener">https://www.qt.io/download-open-source</a></td></tr>
+      <tr><th>備考</th><td>
+        Qt/PySide6は LGPLv3 / GPLv2 / GPLv3 / 商用ライセンスのデュアルライセンスですが、
+        本ソフトウェアでは無償のオープンソース版をLGPLv3条件で使用しています（商用Qt
+        ライセンスは購入していません）。--onedir 配布形式のため、Qtの各DLLは独立した
+        ファイルとして配置されており、利用者が互換バージョンに差し替えることが可能です。
+      </td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">3. winrt (winrt-runtime / winrt-Windows.Services.Store / winrt-Windows.Foundation)</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>3.2.1</td></tr>
+      <tr><th>ライセンス</th><td>MIT License</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) Microsoft Corporation. All rights reserved.<br>Copyright (c) 2021-2025 David Lechner</td></tr>
+      <tr><th>出典</th><td><a href="https://github.com/pywinrt/pywinrt" target="_blank" rel="noopener">https://github.com/pywinrt/pywinrt</a></td></tr>
+      <tr><th>用途</th><td>Microsoft Store無料体験版の判定にのみ使用。BOOTH版・直接配布版では一切呼び出されません。</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">4. NumPy</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>2.2.6</td></tr>
+      <tr><th>ライセンス</th><td>BSD 3-Clause License（"Modified BSD License"）</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2005-2024, NumPy Developers</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">5. SciPy</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>1.15.3</td></tr>
+      <tr><th>ライセンス</th><td>BSD 3-Clause License</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2001-2024 SciPy Developers</td></tr>
+      <tr><th>備考</th><td>ImageHash（下記6.）の内部依存として同梱されています。</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">6. ImageHash</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>4.3.2</td></tr>
+      <tr><th>ライセンス</th><td>BSD 2-Clause License</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2013-2023, Johannes Buchner</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">7. PyWavelets</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>1.8.0</td></tr>
+      <tr><th>ライセンス</th><td>MIT License</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2006-2012 Filip Wasilewski, 2012-2024 PyWavelets Developers</td></tr>
+      <tr><th>備考</th><td>ImageHash（上記6.）の内部依存として同梱されています。</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">8. Pillow (PIL Fork)</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>12.3.0</td></tr>
+      <tr><th>ライセンス</th><td>MIT-CMU License（通称 "PIL License" / HPND系）</td></tr>
+      <tr><th>著作権</th><td>
+        Copyright (c) 1997-2011 by Secret Labs AB<br>
+        Copyright (c) 1995-2011 by Fredrik Lundh and contributors<br>
+        Copyright (c) 2010 by Jeffrey A. Clark (Alex) and contributors
+      </td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">9. Send2Trash</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>2.1.0</td></tr>
+      <tr><th>ライセンス</th><td>BSD 3-Clause License</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2017, Hard Yakka Industries / Virgil Dupras and contributors</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">10. Python (CPython) 本体</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>3.10</td></tr>
+      <tr><th>ライセンス</th><td>Python Software Foundation License (PSF License)</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2001-2024 Python Software Foundation</td></tr>
+    </table>
+  </section>
+
+  <section class="card">
+    <h3 style="margin-top:0;">11. PyInstaller（ビルドにのみ使用）</h3>
+    <table class="spec-table">
+      <tr><th>バージョン</th><td>6.22.3</td></tr>
+      <tr><th>ライセンス</th><td>GPL version 2（ただし「リンク例外」付き）</td></tr>
+      <tr><th>著作権</th><td>Copyright (c) 2010-2024, PyInstaller Development Team</td></tr>
+      <tr><th>備考</th><td>
+        PyInstallerのライセンスには明示的な例外条項があり、PyInstallerでビルドされた
+        プログラム（本ソフトウェア本体）自体がGPLの対象になることはなく、どのような
+        ライセンスでも配布可能です。本ソフトウェアは現在GPL専用コンポーネントを一切
+        同梱していません（上記1.参照）。
+      </td></tr>
+    </table>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>
+    <a href="index.html">トップ</a> |
+    <a href="tokushoho.html">特定商取引法に基づく表記</a> |
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="license.html">ライセンス情報</a> |
+    <a href="contact.html">お問い合わせ</a>
+  </p>
+  <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+</footer>
+
+</body>
+</html>

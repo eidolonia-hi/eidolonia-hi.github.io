@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー | エイドロニア重工</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img class="logo" src="assets/logo.png" alt="Janus ロゴ">
+    <a class="brand" href="index.html">エイドロニア重工</a>
+  </div>
+</header>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html">トップ</a>
+    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="privacy.html" class="active">プライバシーポリシー</a>
+    <a href="license.html">ライセンス情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<main>
+  <h1 class="page-title">Janus - 重複動画ファインダー プライバシーポリシー</h1>
+  <p class="page-lede">最終更新日: 2026年10月8日</p>
+
+  <section>
+    <h2>1. 収集する情報</h2>
+    <p>
+      Janus - 重複動画ファインダー（以下「本ソフトウェア」）は、お使いのPC上にある
+      ローカルの動画ファイルを解析して重複を検出するデスクトップアプリケーションです。
+      ソースコード全体を確認した結果、本ソフトウェアは以下の通りです。
+    </p>
+    <ul>
+      <li>ネットワーク通信を行うコード（HTTP/HTTPS通信、ソケット通信等）を一切含んでいません。</li>
+      <li>ユーザーの個人情報、動画ファイルの内容そのもの、ファイル名、フォルダ構成などのいかなる情報も、外部のサーバーや開発者（エイドロニア重工）に送信することはありません。</li>
+      <li>利用状況の収集（テレメトリ・アクセス解析・広告識別子・クラッシュレポートの自動送信等）も一切行いません（後述のクラッシュログはPC内にのみ保存され、外部送信はされません）。</li>
+      <li>本ソフトウェアは同梱の動画解析エンジン（FFmpeg）をローカルプロセスとして呼び出しますが、これも通信を行わないオフライン動作のコンポーネントです。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>2. ローカルに保存される情報</h2>
+    <p>本ソフトウェアが解析・生成したデータは、お使いのPC内にのみ保存されます。保存されるのは以下の内容です。</p>
+    <ul>
+      <li>動画ファイルのメタデータ: ファイルの絶対パス、ファイルサイズ、更新日時、再生時間、解像度、コーデック、ビットレート、コンテナ形式</li>
+      <li>内容ベースの指紋データ（知覚ハッシュ値）: 動画の内容を要約した短い数値列で、動画の中身（映像データ自体）は含まれません</li>
+      <li>サムネイル画像: 動画から抽出した静止画1枚（内容確認用）</li>
+      <li>ユーザー設定: 登録したフォルダのパス一覧、「重複ではない」として除外した組み合わせの記録</li>
+      <li>操作ログ: いつ・どのファイルをごみ箱に移動したか、保持ファイルの名前変更・移動履歴（削除ログ）</li>
+      <li>エラー発生時の記録（クラッシュログ。PC内にのみ保存）</li>
+    </ul>
+    <p>これらはすべてWindowsの設定フォルダ内に保存され、外部に送信されることはありません。保存場所はインストール方法によって異なります。</p>
+    <h3>Microsoft Store版（MSIXパッケージ）</h3>
+    <p>
+      <code>%LOCALAPPDATA%\Packages\&lt;アプリ固有のID&gt;\LocalCache\Local\video-dedupe</code>
+      フォルダに保存されます。このフォルダはWindowsによって管理されており、本ソフトウェアを
+      アンインストールすると、上記データを含めて自動的に完全に削除されます。
+    </p>
+    <h3>BOOTH版・その他直接配布版（インストーラーを使わない形式）</h3>
+    <p>
+      <code>%LOCALAPPDATA%\video-dedupe</code> フォルダに保存されます。このフォルダは、
+      アプリ本体のファイルを削除するだけでは自動的には削除されません。データを完全に
+      消去したい場合は、エクスプローラーのアドレスバーに <code>%LOCALAPPDATA%\video-dedupe</code>
+      と入力してこのフォルダを開き、手動で削除してください。
+    </p>
+  </section>
+
+  <section>
+    <h2>3. ファイルの削除・移動について</h2>
+    <p>
+      本ソフトウェアは、ユーザーが選択した重複ファイルをWindowsのごみ箱に移動する機能を
+      持ちます。完全削除ではなく、誤って削除した場合はごみ箱から復元できます。この操作は
+      すべてローカルで完結し、外部への通知やアップロードは行いません。
+    </p>
+  </section>
+
+  <section>
+    <h2>4. 無料体験版について（Microsoft Store版のみ）</h2>
+    <p>
+      Microsoft Storeで配布する無料体験版には、ごみ箱への移動件数に上限（合計10件）を
+      設ける機能制限がありますが、動画の解析・内容の確認・重複候補の表示に関する機能や
+      収集するデータの範囲は製品版と同じです。体験版・製品版のいずれも、本ポリシーに
+      記載した範囲を超えるデータ収集は行いません。
+    </p>
+    <p>
+      この移動件数のカウンタは、上記2.で説明したアプリ本体のデータと同じ場所
+      （Microsoft Store版アンインストール時に自動削除される
+      <code>%LOCALAPPDATA%\Packages\&lt;アプリ固有のID&gt;\LocalCache\Local\video-dedupe</code>
+      フォルダ）に保存されます。そのため、体験版をアンインストールすると、他のデータと
+      同様にこのカウンタも削除されます。再インストールすると体験版の利用回数はリセット
+      され、改めて合計10件まで利用できる状態になります。これは意図的な仕様です。この
+      ファイルには利用済み件数（数値）のみが記録され、動画ファイルの情報は一切含まれません。
+      製品版（体験版でないライセンス）および直接配布版（BOOTH版等）では、このカウンタ
+      機能自体が一切動作せず、ファイルも作成されません。
+    </p>
+  </section>
+
+  <section>
+    <h2>5. 第三者への提供</h2>
+    <p>上記の通り外部送信を行わないため、第三者への情報提供も発生しません。</p>
+  </section>
+
+  <section>
+    <h2>6. お問い合わせ</h2>
+    <p>本ポリシーに関するご質問は下記までご連絡ください。</p>
+    <p>
+      エイドロニア重工（Eidolonia Heavy Industries）<br>
+      <a href="mailto:eidolonia.hi@gmail.com">eidolonia.hi@gmail.com</a>
+    </p>
+  </section>
+
+  <section>
+    <h2>7. 改定</h2>
+    <p>本ポリシーの内容は予告なく改定される場合があります。重要な変更がある場合は本ページ上で通知します。</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <p>
+    <a href="index.html">トップ</a> |
+    <a href="tokushoho.html">特定商取引法に基づく表記</a> |
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="license.html">ライセンス情報</a> |
+    <a href="contact.html">お問い合わせ</a>
+  </p>
+  <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+</footer>
+
+</body>
+</html>
