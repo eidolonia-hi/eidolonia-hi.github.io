@@ -34,8 +34,8 @@
 
   <section class="notice">
     GPLv3・LGPLv3の条文全文は、Free Software Foundation公式サイトでご確認いただけます。<br>
-    GPLv3: <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank" rel="noopener">https://www.gnu.org/licenses/gpl-3.0.txt</a><br>
-    LGPLv3: <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" target="_blank" rel="noopener">https://www.gnu.org/licenses/lgpl-3.0.txt</a><br>
+    <a href="https://www.gnu.org/licenses/gpl-3.0.txt" target="_blank" rel="noopener">GPLv3 の条文全文（gnu.org）</a><br>
+    <a href="https://www.gnu.org/licenses/lgpl-3.0.txt" target="_blank" rel="noopener">LGPLv3 の条文全文（gnu.org）</a><br>
     （アプリの配布物には、上記サイトから取得した条文全文のテキストファイルを同梱しています）
   </section>
 
@@ -46,28 +46,51 @@
       <tr><th>著作権</th><td>Copyright (c) 2000-2026 the FFmpeg developers</td></tr>
       <tr><th>バージョン</th><td>n9.0.2-22-g46d8f462ee（ビルド日 2026-10-07）</td></tr>
       <tr><th>配布形態</th><td>ffmpeg.exe（実行ファイルとして同梱。本体コードへの静的／動的リンクはせず、別プロセスとして呼び出すのみ）</td></tr>
-      <tr><th>出典</th><td>BtbN/FFmpeg-Builds（GitHub）のリリース "autobuild-2026-10-07-13-07" に含まれる
-        "ffmpeg-n9.0.2-22-g46d8f462ee-win64-lgpl-9.0.zip"<br>
-        （同梱の ffmpeg.exe は、この zip 内の bin/ffmpeg.exe と同一ファイルです。<br>
-        SHA-256: c43e397fdf3303d04172122f5402cac66bdbb24e6727184f22c2070e2dbee7d0）</td></tr>
+      <tr><th>出典</th><td>
+        BtbN/FFmpeg-Builds（GitHub）のリリース "autobuild-2026-10-07-13-07" に含まれる
+        <code class="filename">ffmpeg-n9.0.2-22-g46d8f462ee-win64-lgpl-9.0.zip</code>
+        <p class="sub-note">同梱の ffmpeg.exe は、この zip 内の bin/ffmpeg.exe と同一ファイルです。</p>
+        <div class="hash-row">
+          <span class="hash-label">SHA-256</span>
+          <code class="hash">c43e397fdf3303d04172122f5402cac66bdbb24e6727184f22c2070e2dbee7d0</code>
+        </div>
+      </td></tr>
       <tr><th>ソースコード入手先</th><td>
-        FFmpeg 本体のソースコード（コミット 46d8f462eeb87ee1f704d8c44a0ee24fca471ad1）:<br>
-        <a href="https://github.com/FFmpeg/FFmpeg/tree/46d8f462eeb87ee1f704d8c44a0ee24fca471ad1" target="_blank" rel="noopener">https://github.com/FFmpeg/FFmpeg/tree/46d8f462eeb87ee1f704d8c44a0ee24fca471ad1</a><br><br>
-        同梱ビルドの配布ページ:<br>
-        <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-10-07-13-07" target="_blank" rel="noopener">https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-10-07-13-07</a><br><br>
-        同梱ビルドの生成に使われたビルドスクリプト（静的に組み込まれた各ライブラリの取得元・バージョンを含む。コミット 9acad4a9ef1583096af7836cc1e9c8cbcb4d3950）:<br>
-        <a href="https://github.com/BtbN/FFmpeg-Builds/tree/9acad4a9ef1583096af7836cc1e9c8cbcb4d3950" target="_blank" rel="noopener">https://github.com/BtbN/FFmpeg-Builds/tree/9acad4a9ef1583096af7836cc1e9c8cbcb4d3950</a><br><br>
-        当方が保存しているソースコード一式（FFmpeg 本体・上記ビルドスクリプト・静的に組み込まれた各ライブラリのソースコード）:<br>
-        <a href="https://github.com/eidolonia-hi/ffmpeg-lgpl-source/releases/tag/n9.0.2-22-g46d8f462ee" target="_blank" rel="noopener">https://github.com/eidolonia-hi/ffmpeg-lgpl-source/releases/tag/n9.0.2-22-g46d8f462ee</a><br><br>
-        上記のいずれかを入手できない場合は、<a href="contact.html">お問い合わせ</a>先までご連絡ください。同梱ビルドに対応するソースコードを提供します。
+        <div class="source-primary">
+          <span class="label-badge">主な入手先</span>
+          <a class="source-link" href="https://github.com/eidolonia-hi/ffmpeg-lgpl-source/releases/tag/n9.0.2-22-g46d8f462ee" target="_blank" rel="noopener">当方が保存しているソースコード一式</a>
+          <span class="source-desc">FFmpeg 本体・下記ビルドスクリプト・静的に組み込まれた各ライブラリのソースコード</span>
+        </div>
+        <p class="source-heading">参考（上流の配布元）</p>
+        <ul class="source-list">
+          <li>
+            <a href="https://github.com/FFmpeg/FFmpeg/tree/46d8f462eeb87ee1f704d8c44a0ee24fca471ad1" target="_blank" rel="noopener">FFmpeg 本体のソースコード（FFmpeg公式）</a>
+            <span class="source-meta">コミット <code class="hash-inline">46d8f462eeb87ee1f704d8c44a0ee24fca471ad1</code></span>
+          </li>
+          <li>
+            <a href="https://github.com/BtbN/FFmpeg-Builds/releases/tag/autobuild-2026-10-07-13-07" target="_blank" rel="noopener">同梱ビルドの配布ページ（BtbN/FFmpeg-Builds）</a>
+          </li>
+          <li>
+            <a href="https://github.com/BtbN/FFmpeg-Builds/tree/9acad4a9ef1583096af7836cc1e9c8cbcb4d3950" target="_blank" rel="noopener">同梱ビルドの生成に使われたビルドスクリプト（BtbN/FFmpeg-Builds）</a>
+            <span class="source-desc">静的に組み込まれた各ライブラリの取得元・バージョンを含む</span>
+            <span class="source-meta">コミット <code class="hash-inline">9acad4a9ef1583096af7836cc1e9c8cbcb4d3950</code></span>
+          </li>
+        </ul>
+        <p class="sub-note">上記のいずれかを入手できない場合は、<a href="contact.html">お問い合わせ</a>先までご連絡ください。同梱ビルドに対応するソースコードを提供します。</p>
       </td></tr>
       <tr><th>備考</th><td>
-        <code>--enable-version3</code> かつ <code>--disable-libx264 --disable-libx265 --disable-libxavs2
-        --disable-libxvid</code> でビルドされた、GPL専用コンポーネントを含まない構成です。
-        本ソフトウェアは ffmpeg を動画のメタデータ取得とフレームのデコード（静止画抽出）にのみ使用し、
+        <p>次のビルドオプションでビルドされた、GPL専用コンポーネントを含まない構成です。</p>
+        <div class="option-list">
+          <code>--enable-version3</code>
+          <code>--disable-libx264</code>
+          <code>--disable-libx265</code>
+          <code>--disable-libxavs2</code>
+          <code>--disable-libxvid</code>
+        </div>
+        <p>本ソフトウェアは ffmpeg を動画のメタデータ取得とフレームのデコード（静止画抽出）にのみ使用し、
         エンコードは行いません。ffmpeg.exe は独立した実行ファイルとして同梱しており、
         利用者が互換ビルドに差し替えることができます（Microsoft Store版はインストール先フォルダが
-        Windows により保護されているため、差し替えは BOOTH版・直接配布版で行えます）。
+        Windows により保護されているため、差し替えは BOOTH版・直接配布版で行えます）。</p>
       </td></tr>
     </table>
   </section>
@@ -78,7 +101,7 @@
       <tr><th>バージョン</th><td>6.11.2</td></tr>
       <tr><th>ライセンス</th><td>GNU Lesser General Public License version 3 (LGPLv3)</td></tr>
       <tr><th>著作権</th><td>Copyright (C) The Qt Company Ltd. and other contributors</td></tr>
-      <tr><th>出典</th><td><a href="https://www.qt.io/download-open-source" target="_blank" rel="noopener">https://www.qt.io/download-open-source</a></td></tr>
+      <tr><th>出典</th><td><a href="https://www.qt.io/download-open-source" target="_blank" rel="noopener">Qt オープンソース版のダウンロードページ（qt.io）</a></td></tr>
       <tr><th>備考</th><td>
         Qt/PySide6は LGPLv3 / GPLv2 / GPLv3 / 商用ライセンスのデュアルライセンスですが、
         本ソフトウェアでは無償のオープンソース版をLGPLv3条件で使用しています（商用Qt
@@ -94,7 +117,7 @@
       <tr><th>バージョン</th><td>3.2.1</td></tr>
       <tr><th>ライセンス</th><td>MIT License</td></tr>
       <tr><th>著作権</th><td>Copyright (c) Microsoft Corporation. All rights reserved.<br>Copyright (c) 2021-2025 David Lechner</td></tr>
-      <tr><th>出典</th><td><a href="https://github.com/pywinrt/pywinrt" target="_blank" rel="noopener">https://github.com/pywinrt/pywinrt</a></td></tr>
+      <tr><th>出典</th><td><a href="https://github.com/pywinrt/pywinrt" target="_blank" rel="noopener">pywinrt/pywinrt（GitHub）</a></td></tr>
       <tr><th>用途</th><td>Microsoft Store無料体験版の判定にのみ使用。BOOTH版・直接配布版では一切呼び出されません。</td></tr>
     </table>
   </section>
