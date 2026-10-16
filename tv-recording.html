@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>録画したテレビ番組の重複を整理する方法（TSとMP4、CMカット版） | エイドロニア重工</title>
+<meta name="description" content="PCで録画したテレビ番組の、TSとエンコード後のMP4の二重保存や、CMカット版と元の録画を、映像の中身で見つけて整理する方法。画質や形式が違っても同じ番組を見つけられます。">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="エイドロニア重工">
+<meta property="og:title" content="録画したテレビ番組の重複を整理する方法（TSとMP4、CMカット版）">
+<meta property="og:description" content="TSとMP4の二重保存や、CMカット版と元の録画を、映像の中身で見つけて整理する方法。">
+<meta property="og:url" content="https://eidolonia-hi.github.io/tv-recording.html">
+<meta property="og:image" content="https://eidolonia-hi.github.io/assets/ogp_1200x630.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+    <img class="logo" src="assets/e_light.svg" alt="エイドロニア重工 ロゴ">
+    <a class="brand" href="index.html">エイドロニア重工</a>
+  </div>
+</header>
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html">トップ</a>
+    <a href="tokushoho.html">特定商取引法に基づく表記</a>
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="license.html">ライセンス情報</a>
+    <a href="contact.html">お問い合わせ</a>
+  </div>
+</nav>
+
+<main>
+  <h1 class="page-title">録画したテレビ番組の重複を整理する方法</h1>
+  <p class="page-lede">TSとエンコード後のMP4、CMカット版と元の録画。PCで録画を続けていると、同じ番組がいつの間にか何本も残っていきます。ファイル名ではなく映像の中身で見つけて、まとめて片付ける方法を紹介します。</p>
+
+  <section>
+    <h2>こんな状態になっていませんか</h2>
+    <ul>
+      <li>録画した <code>.ts</code> を MP4 にエンコードしたあと、元の TS も消さずに残している</li>
+      <li>CMカットした版を作ったが、カット前の録画もそのまま置いてある</li>
+      <li>同じ番組を、別のフォルダや外付けHDDにもコピーしてある</li>
+      <li>ファイル名を付け直したので、どれとどれが同じ番組なのか分からない</li>
+    </ul>
+    <p>地上デジタル放送の TS は、30分番組でも 3〜4GB ほどになります。二重に残っているだけで、ドライブの容量はすぐに足りなくなります。</p>
+  </section>
+
+  <section>
+    <h2>ファイル名や容量では見つけられない理由</h2>
+    <p>
+      一般的な重複ファイル検索ソフトは、ファイル名やファイルの中身（ハッシュ値）が完全に同じものを探します。
+      ところが、TS を MP4 にエンコードすると、形式も解像度もビットレートも変わるため、ファイルとしては「まったく別物」になります。
+      CMカット版は長さも違います。そのため、こうした録画の重複は、これまでは1本ずつ再生して見比べるしかありませんでした。
+    </p>
+    <p>
+      <a href="index.html">Janus - 重複動画ファインダー</a> は、動画のいくつかの場面を取り出して、映像そのものを比べます。
+      形式や画質、長さが違っていても、同じ番組かどうかを判定できます。
+    </p>
+  </section>
+
+  <section>
+    <h2>整理の手順</h2>
+    <ol>
+      <li><strong>「＋ 場所を追加」で録画フォルダを選ぶ</strong><br>
+        TS を置いているフォルダと、エンコード後の MP4 を置いているフォルダの両方を追加します。外付けHDDも追加できます。</li>
+      <li><strong>「短く編集した版も探す」にチェックを入れて、「重複動画を探す」を押す</strong><br>
+        CMカット版を見つけるには、このチェックが必要です。初めて探すときは、1本ずつ詳しく調べるため時間がかかります。2回目からは、前回から変わっていない動画を調べ直さないので速くなります。</li>
+      <li><strong>結果を確かめて、残すものにチェックを入れる</strong><br>
+        チェックを入れなかったファイルだけが、ごみ箱へ移ります。移す前に必ず確認画面が出ます。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>録画のパターン別：どう表示されるか</h2>
+
+    <h3>TS とエンコード後の MP4（カットなし）</h3>
+    <p>
+      長さがほぼ同じなので、<strong>「同じ動画」</strong>のタブにまとめて表示されます。
+      画質と長さがほぼ同じ場合は、ビットレートが一番高いファイル（ふつうは TS）に「おすすめ」の印が付き、残す側にチェックが入ります。
+    </p>
+    <div class="notice">
+      容量を減らしたい場合は、チェックを MP4 側に付け替えてください。「おすすめ」は画質を優先した目安で、どちらを残すかはご自身で選べます。
+    </div>
+
+    <h3>CMカット版と、カット前の録画</h3>
+    <p>
+      長さが違うので、<strong>「似ている動画・要確認」</strong>のタブに表示されます。
+      カット前の録画（長いほう）と、その一部でできているCMカット版（短いほう）が組になって並びます。
+      本当に同じ番組か、カットし忘れた場面がないかを確かめてから整理してください。
+    </p>
+
+    <h3>同じ録画を別の場所にコピーしたもの</h3>
+    <p>中身も長さも同じなので、<strong>「同じ動画」</strong>のタブに表示されます。ファイル名を変えてあっても見つかります。</p>
+  </section>
+
+  <section>
+    <h2>見つけられないことがあるもの</h2>
+    <ul>
+      <li><strong>前後の余白だけが違う、ほぼ同じ長さの録画</strong>：録画の開始・終了のタイミングがずれて、長さが数秒以上違う場合です。たとえば、同じ放送を2回録画した場合や、再放送を録画した場合です。現在のバージョンでは見つからないことがあります。</li>
+      <li><strong>画面の縦横比が違うもの</strong>：4:3 と 16:9、黒帯の有無などで映り方が違うと、別の映像と判定されることがあります。</li>
+      <li><strong>PCで再生できないファイル</strong>：ブルーレイ／DVDレコーダーの中にある録画や、コピー制御のかかったファイルは調べられません。PCに保存してあって、ふつうに再生できる動画ファイルが対象です。</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>安心して整理するために</h2>
+    <ul>
+      <li>削除ではなく<strong>ごみ箱へ移す</strong>ので、間違えても元に戻せます（USBメモリなど、ごみ箱に入らない場所のファイルは、移す前に知らせます）</li>
+      <li>何をいつ整理したかは、あとから記録で確認できます</li>
+      <li>インターネット通信は行いません。録画ファイルの情報が外に送られることはありません</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2 style="border:none; padding-left:0; margin-bottom:12px;">まずは無料体験版で</h2>
+    <p>
+      Microsoft Store 版には無料体験版があります。重複の検出と確認は製品版と同じで、利用期間の制限もありません（ごみ箱への移動は合計10件まで）。
+      お使いの録画フォルダで、どれだけ重複が見つかるかを先に確かめられます。
+    </p>
+    <table class="spec-table">
+      <tr><th>対応OS</th><td>Windows 11（64bit版）</td></tr>
+      <tr><th>対応形式</th><td>.ts / .m2ts / .mp4 / .mkv / .avi / .mov / .wmv / .flv / .webm / .m4v / .mpg / .mpeg</td></tr>
+      <tr><th>価格</th><td>980円（税込）</td></tr>
+    </table>
+    <p style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
+      <a class="btn" href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store で無料体験版を入手</a>
+      <a class="btn" href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH で購入</a>
+    </p>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>
+    <a href="index.html">トップ</a> |
+    <a href="tokushoho.html">特定商取引法に基づく表記</a> |
+    <a href="privacy.html">プライバシーポリシー</a> |
+    <a href="license.html">ライセンス情報</a> |
+    <a href="contact.html">お問い合わせ</a>
+  </p>
+  <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+</footer>
+
+</body>
+</html>
