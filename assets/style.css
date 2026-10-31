@@ -1,0 +1,938 @@
+/* エイドロニア重工 共通スタイル */
+
+:root {
+  color-scheme: dark;
+  --ink: #141416;
+  --surface: #1c1c1f;
+  --band: #18181b;
+  --line: #2e2e33;
+  --frame: #3a3a40;
+  --muted: #9c9a93;
+  --body: #b5b3ac;
+  --bone: #e9e7e2;
+  --signal: #d9452b;
+  --font-sans: "IBM Plex Sans JP", "Hiragino Sans", "Yu Gothic UI", sans-serif;
+  --font-mono: "IBM Plex Mono", Consolas, "IBM Plex Sans JP", "Hiragino Sans", "Yu Gothic UI", monospace;
+  --max-width: 1160px;
+  --gutter: 32px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--body);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--bone);
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: #fff;
+}
+
+a:focus-visible {
+  outline: 2px solid var(--bone);
+  outline-offset: 3px;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--bone);
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--max-width) + var(--gutter) * 2);
+  margin: 0 auto;
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+/* ---- 赤のアクセント（帯と四角のみ） ---- */
+
+.bar {
+  display: block;
+  flex: none;
+  height: 6px;
+  background: var(--signal);
+}
+
+.bar-28 { width: 28px; }
+.bar-48 { width: 48px; }
+
+.square {
+  display: block;
+  flex: none;
+  width: 8px;
+  height: 8px;
+  background: var(--signal);
+}
+
+/* ---- 英字ラベル ---- */
+
+.label {
+  margin: 0;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* ---- ヘッダー ---- */
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--bone);
+  text-decoration: none;
+}
+
+.brand img {
+  flex: none;
+  width: 36px;
+  height: 36px;
+}
+
+.brand-text {
+  display: block;
+}
+
+.brand-en {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  line-height: 1.5;
+}
+
+.brand-ja {
+  display: block;
+  color: var(--muted);
+  font-size: 11px;
+  letter-spacing: 0.3em;
+  line-height: 1.5;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 28px;
+}
+
+.site-nav a {
+  color: var(--bone);
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.site-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---- ボタン ---- */
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 10px 28px;
+  border: 1px solid var(--bone);
+  background: var(--bone);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn:hover {
+  border-color: #fff;
+  background: #fff;
+  color: var(--ink);
+}
+
+.btn-secondary {
+  border-color: var(--frame);
+  background: transparent;
+  color: var(--bone);
+  font-weight: 500;
+}
+
+.btn-secondary:hover {
+  border-color: var(--bone);
+  background: transparent;
+  color: var(--bone);
+}
+
+/* ---- 額縁（スクリーンショット枠） ---- */
+
+.frame {
+  position: relative;
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--frame);
+  background: var(--surface);
+}
+
+.frame-bar {
+  position: absolute;
+  left: -1px;
+  bottom: -7px;
+  width: 96px;
+  height: 6px;
+  background: var(--signal);
+}
+
+.frame figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* ---- ヒーロー ---- */
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+  padding-top: 88px;
+  padding-bottom: 104px;
+}
+
+.product-name {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.product-icon {
+  flex: none;
+  width: 72px;
+  height: 72px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 64px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.product-sub {
+  margin: 4px 0 0;
+  color: var(--bone);
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  line-height: 1.5;
+}
+
+.catch {
+  margin: 28px 0 0;
+  color: var(--bone);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.lede {
+  max-width: 34em;
+  margin: 24px 0 0;
+}
+
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+  margin: 24px 0 0;
+  color: var(--bone);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.facts .sep {
+  color: var(--muted);
+}
+
+.hero .btn-row {
+  margin-top: 28px;
+}
+
+.fine-print {
+  max-width: 44em;
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* ---- 帯状セクション ---- */
+
+.band {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: var(--band);
+}
+
+/* ---- 強み3つ ---- */
+
+.strengths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.strength {
+  padding: 40px 32px 48px;
+  border-left: 1px solid var(--line);
+}
+
+.strength:first-child {
+  padding-left: 0;
+  border-left: 0;
+}
+
+.strength:last-child {
+  padding-right: 0;
+}
+
+.strength-no {
+  margin: 0;
+  color: var(--signal);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+}
+
+.strength h2 {
+  margin: 10px 0 12px;
+  font-size: 20px;
+}
+
+.strength p:last-child {
+  margin: 0;
+  font-size: 15px;
+}
+
+/* ---- Janusとは ---- */
+
+.about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: center;
+  padding-top: 96px;
+  padding-bottom: 72px;
+}
+
+.compare-frames {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.same-content {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  color: var(--bone);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+}
+
+.same-content::before,
+.same-content::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--line);
+}
+
+.about h2 {
+  margin: 14px 0 22px;
+  font-size: 30px;
+}
+
+.about-text p:last-child {
+  max-width: 34em;
+  margin-bottom: 0;
+}
+
+/* ---- 機能とおすすめ ---- */
+
+.lists {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 48px;
+  padding-top: 24px;
+  padding-bottom: 96px;
+}
+
+.list-heading {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  line-height: 1.6;
+}
+
+.rule-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid var(--line);
+  list-style: none;
+}
+
+.rule-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin: 0;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+  color: var(--bone);
+  font-size: 15px;
+}
+
+.rule-list .square {
+  position: relative;
+  top: -2px;
+}
+
+.list-note {
+  margin: 18px 0 0;
+  font-size: 14px;
+}
+
+/* ---- 動作環境・価格 ---- */
+
+.spec-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  gap: 48px;
+  padding-top: 88px;
+  padding-bottom: 88px;
+}
+
+.spec-inner h2 {
+  margin: 14px 0 0;
+  font-size: 28px;
+}
+
+.spec-list {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.spec-row {
+  display: grid;
+  grid-template-columns: 180px minmax(0, 1fr);
+  gap: 4px 16px;
+  align-items: baseline;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.spec-row dt {
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.spec-row dd {
+  margin: 0;
+  color: var(--bone);
+}
+
+.spec-note {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ---- 最後の購入導線 ---- */
+
+.closing {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.closing h2 {
+  margin: 22px 0 32px;
+  font-size: 32px;
+}
+
+/* ---- フッター ---- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+}
+
+.footer-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px 32px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-brand svg {
+  flex: none;
+}
+
+.footer-brand p {
+  margin: 0;
+}
+
+.footer-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 24px;
+}
+
+.footer-nav a {
+  color: var(--muted);
+}
+
+.footer-nav a:hover {
+  color: var(--bone);
+}
+
+/* ---- 下層ページ（特商法・プライバシー・ライセンス・お問い合わせ・解説記事） ---- */
+
+.doc {
+  padding-top: 64px;
+  padding-bottom: 88px;
+}
+
+.doc > * {
+  max-width: 860px;
+}
+
+.page-title {
+  margin: 0 0 12px;
+  font-size: 30px;
+}
+
+.page-title::before {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 6px;
+  margin-bottom: 24px;
+  background: var(--signal);
+}
+
+.page-lede {
+  max-width: 34em;
+  margin: 0 0 40px;
+  color: var(--muted);
+}
+
+.doc section {
+  margin-bottom: 48px;
+}
+
+.doc section:last-child {
+  margin-bottom: 0;
+}
+
+.doc h2 {
+  margin: 0 0 16px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 20px;
+}
+
+.doc h3 {
+  margin: 28px 0 8px;
+  font-size: 16px;
+}
+
+.doc section > p,
+.doc section > ul,
+.doc section > ol {
+  max-width: 34em;
+}
+
+.doc ul,
+.doc ol {
+  margin: 0 0 14px;
+  padding-left: 1.4em;
+}
+
+.doc li {
+  margin-bottom: 6px;
+}
+
+.doc strong {
+  color: var(--bone);
+}
+
+.doc figure img {
+  border: 1px solid var(--frame);
+}
+
+.doc .card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  background: var(--band);
+}
+
+.doc .card h2 {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.email-link {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.notice {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  background: var(--band);
+  font-size: 15px;
+}
+
+table.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table.spec-table th,
+table.spec-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+table.spec-table tr:first-child th,
+table.spec-table tr:first-child td {
+  border-top: 1px solid var(--line);
+}
+
+table.spec-table th {
+  width: 30%;
+  padding-left: 0;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+table.spec-table td {
+  color: var(--bone);
+  padding-right: 0;
+}
+
+table.spec-table td > p:last-child,
+table.spec-table td > ul:last-child {
+  margin-bottom: 0;
+}
+
+code {
+  padding: 1px 6px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--bone);
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  overflow-wrap: anywhere;
+}
+
+code.hash {
+  display: block;
+  padding: 8px 12px;
+  line-height: 1.6;
+  word-break: break-all;
+}
+
+code.hash-inline {
+  word-break: break-all;
+}
+
+.sub-note {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.hash-row {
+  margin-top: 10px;
+}
+
+.hash-label {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.option-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 0 0 14px;
+}
+
+.option-list code {
+  padding: 3px 8px;
+}
+
+.source-primary {
+  margin-bottom: 18px;
+  padding: 12px 16px;
+  border: 1px solid var(--frame);
+}
+
+.label-badge {
+  display: inline-block;
+  margin-bottom: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.source-primary .source-link {
+  display: block;
+  font-weight: 700;
+}
+
+.source-heading {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+ul.source-list {
+  margin: 0 0 12px;
+  padding-left: 1.2em;
+}
+
+ul.source-list li {
+  margin-bottom: 10px;
+}
+
+.source-desc,
+.source-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ---- レスポンシブ ---- */
+
+@media (max-width: 900px) {
+  .hero-inner,
+  .about,
+  .spec-inner {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .hero-inner {
+    gap: 56px;
+    padding-top: 56px;
+    padding-bottom: 72px;
+  }
+
+  .about {
+    gap: 40px;
+    padding-top: 64px;
+    padding-bottom: 56px;
+  }
+
+  .spec-inner {
+    gap: 28px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .strengths {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .strength,
+  .strength:first-child,
+  .strength:last-child {
+    padding: 32px 0;
+    border-left: 0;
+  }
+
+  .strength + .strength {
+    border-top: 1px solid var(--line);
+  }
+
+  .lists {
+    grid-template-columns: minmax(0, 1fr);
+    padding-bottom: 72px;
+  }
+
+  .closing {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+}
+
+@media (max-width: 560px) {
+  :root {
+    --gutter: 20px;
+  }
+
+  .brand-en {
+    font-size: 12px;
+    letter-spacing: 0.2em;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .product-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .product-sub {
+    font-size: 18px;
+  }
+
+  .catch {
+    font-size: 24px;
+  }
+
+  .about h2 {
+    font-size: 26px;
+  }
+
+  .closing h2 {
+    font-size: 26px;
+  }
+
+  .btn-row .btn {
+    width: 100%;
+  }
+
+  .spec-row {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .doc {
+    padding-top: 40px;
+    padding-bottom: 56px;
+  }
+
+  .page-title {
+    font-size: 26px;
+  }
+
+  .doc .card {
+    padding: 18px 16px;
+  }
+
+  table.spec-table th,
+  table.spec-table td {
+    display: block;
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  table.spec-table th {
+    padding-bottom: 2px;
+    border-bottom: 0;
+  }
+
+  table.spec-table td {
+    padding-top: 2px;
+  }
+
+  table.spec-table tr:first-child td {
+    border-top: 0;
+  }
+}

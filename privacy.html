@@ -13,37 +13,37 @@
 <meta property="og:url" content="https://eidolonia-hi.github.io/privacy.html">
 <meta property="og:image" content="https://eidolonia-hi.github.io/assets/ogp_1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
-    <img class="logo" src="assets/e_light.svg" alt="エイドロニア重工 ロゴ">
-    <a class="brand" href="index.html">エイドロニア重工</a>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/e_light.svg" width="36" height="36" alt="">
+      <span class="brand-text">
+        <span class="brand-en">EIDOLONIA HEAVY INDUSTRIES</span>
+        <span class="brand-ja">エイドロニア重工</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="index.html#product">製品</a>
+      <a href="index.html#spec">動作環境・価格</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
   </div>
 </header>
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html">トップ</a>
-    <a href="tokushoho.html">特定商取引法に基づく表記</a>
-    <a href="privacy.html" class="active">プライバシーポリシー</a>
-    <a href="license.html">ライセンス情報</a>
-    <a href="contact.html">お問い合わせ</a>
-  </div>
-</nav>
 
-<main>
+<main class="wrap doc">
   <h1 class="page-title">Janus - 重複動画ファインダー プライバシーポリシー</h1>
   <p class="page-lede">最終更新日: 2026年10月12日</p>
 
   <section>
     <h2>1. 収集する情報</h2>
-    <p>
-      Janus - 重複動画ファインダー（以下「本ソフトウェア」）は、お使いのPC上にある
-      ローカルの動画ファイルを解析して重複を検出するデスクトップアプリケーションです。
-      ソースコード全体を確認した結果、本ソフトウェアは以下の通りです。
-    </p>
+    <p>Janus - 重複動画ファインダー（以下「本ソフトウェア」）は、お使いのPC上にあるローカルの動画ファイルを解析して重複を検出するデスクトップアプリケーションです。ソースコード全体を確認した結果、本ソフトウェアは以下の通りです。</p>
     <ul>
       <li>ネットワーク通信を行うコード（HTTP/HTTPS通信、ソケット通信等）を一切含んでいません。</li>
       <li>ユーザーの個人情報、動画ファイルの内容そのもの、ファイル名、フォルダ構成などのいかなる情報も、外部のサーバーや開発者（エイドロニア重工）に送信することはありません。</li>
@@ -65,50 +65,20 @@
     </ul>
     <p>これらはすべてWindowsの設定フォルダ内に保存され、外部に送信されることはありません。保存場所はインストール方法によって異なります。</p>
     <h3>Microsoft Store版（MSIXパッケージ）</h3>
-    <p>
-      <code>%LOCALAPPDATA%\Packages\&lt;アプリ固有のID&gt;\LocalCache\Local\video-dedupe</code>
-      フォルダに保存されます。このフォルダはWindowsによって管理されており、本ソフトウェアを
-      アンインストールすると、上記データを含めて自動的に完全に削除されます。
-    </p>
+    <p><code>%LOCALAPPDATA%\Packages\&lt;アプリ固有のID&gt;\LocalCache\Local\video-dedupe</code>フォルダに保存されます。このフォルダはWindowsによって管理されており、本ソフトウェアをアンインストールすると、上記データを含めて自動的に完全に削除されます。</p>
     <h3>BOOTH版・その他直接配布版（インストーラーを使わない形式）</h3>
-    <p>
-      <code>%LOCALAPPDATA%\video-dedupe</code> フォルダに保存されます。このフォルダは、
-      アプリ本体のファイルを削除するだけでは自動的には削除されません。データを完全に
-      消去したい場合は、エクスプローラーのアドレスバーに <code>%LOCALAPPDATA%\video-dedupe</code>
-      と入力してこのフォルダを開き、手動で削除してください。
-    </p>
+    <p><code>%LOCALAPPDATA%\video-dedupe</code> フォルダに保存されます。このフォルダは、アプリ本体のファイルを削除するだけでは自動的には削除されません。データを完全に消去したい場合は、エクスプローラーのアドレスバーに <code>%LOCALAPPDATA%\video-dedupe</code>と入力してこのフォルダを開き、手動で削除してください。</p>
   </section>
 
   <section>
     <h2>3. ファイルの削除・移動について</h2>
-    <p>
-      本ソフトウェアは、ユーザーが選択した重複ファイルをWindowsのごみ箱に移動する機能を
-      持ちます。ごみ箱に移動したファイルは、ごみ箱から復元できます。ネットワークドライブ上の
-      ファイルなど、Windowsの仕様でごみ箱に移動できないファイルは、実行前の確認画面でその旨を
-      表示し、ユーザーが承認した場合に限り完全に削除します。これらの操作はすべてローカルで完結し、
-      外部への通知やアップロードは行いません。
-    </p>
+    <p>本ソフトウェアは、ユーザーが選択した重複ファイルをWindowsのごみ箱に移動する機能を持ちます。ごみ箱に移動したファイルは、ごみ箱から復元できます。ネットワークドライブ上のファイルなど、Windowsの仕様でごみ箱に移動できないファイルは、実行前の確認画面でその旨を表示し、ユーザーが承認した場合に限り完全に削除します。これらの操作はすべてローカルで完結し、外部への通知やアップロードは行いません。</p>
   </section>
 
   <section>
     <h2>4. 無料体験版について（Microsoft Store版のみ）</h2>
-    <p>
-      Microsoft Storeで配布する無料体験版には、ごみ箱への移動件数に上限（合計10件）を
-      設ける機能制限がありますが、動画の解析・内容の確認・重複候補の表示に関する機能や
-      収集するデータの範囲は製品版と同じです。体験版・製品版のいずれも、本ポリシーに
-      記載した範囲を超えるデータ収集は行いません。
-    </p>
-    <p>
-      この移動件数のカウンタは、上記2.で説明したアプリ本体のデータと同じ場所
-      （Microsoft Store版アンインストール時に自動削除される
-      <code>%LOCALAPPDATA%\Packages\&lt;アプリ固有のID&gt;\LocalCache\Local\video-dedupe</code>
-      フォルダ）に保存されます。そのため、体験版をアンインストールすると、他のデータと
-      同様にこのカウンタも削除されます。再インストールすると体験版の利用回数はリセット
-      され、改めて合計10件まで利用できる状態になります。これは意図的な仕様です。この
-      ファイルには利用済み件数（数値）のみが記録され、動画ファイルの情報は一切含まれません。
-      製品版（体験版でないライセンス）および直接配布版（BOOTH版等）では、このカウンタ
-      機能自体が一切動作せず、ファイルも作成されません。
-    </p>
+    <p>Microsoft Storeで配布する無料体験版には、ごみ箱への移動件数に上限（合計10件）を設ける機能制限がありますが、動画の解析・内容の確認・重複候補の表示に関する機能や収集するデータの範囲は製品版と同じです。体験版・製品版のいずれも、本ポリシーに記載した範囲を超えるデータ収集は行いません。</p>
+    <p>この移動件数のカウンタは、上記2.で説明したアプリ本体のデータと同じ場所（Microsoft Store版アンインストール時に自動削除される<code>%LOCALAPPDATA%\Packages\&lt;アプリ固有のID&gt;\LocalCache\Local\video-dedupe</code>フォルダ）に保存されます。そのため、体験版をアンインストールすると、他のデータと同様にこのカウンタも削除されます。再インストールすると体験版の利用回数はリセットされ、改めて合計10件まで利用できる状態になります。これは意図的な仕様です。このファイルには利用済み件数（数値）のみが記録され、動画ファイルの情報は一切含まれません。製品版（体験版でないライセンス）および直接配布版（BOOTH版等）では、このカウンタ機能自体が一切動作せず、ファイルも作成されません。</p>
   </section>
 
   <section>
@@ -119,10 +89,8 @@
   <section>
     <h2>6. お問い合わせ</h2>
     <p>本ポリシーに関するご質問は下記までご連絡ください。</p>
-    <p>
-      エイドロニア重工（Eidolonia Heavy Industries）<br>
-      <a href="mailto:eidolonia.hi@gmail.com">eidolonia.hi@gmail.com</a>
-    </p>
+    <p>エイドロニア重工（Eidolonia Heavy Industries）<br>
+      <a href="mailto:eidolonia.hi@gmail.com">eidolonia.hi@gmail.com</a></p>
   </section>
 
   <section>
@@ -132,14 +100,18 @@
 </main>
 
 <footer class="site-footer">
-  <p>
-    <a href="index.html">トップ</a> |
-    <a href="tokushoho.html">特定商取引法に基づく表記</a> |
-    <a href="privacy.html">プライバシーポリシー</a> |
-    <a href="license.html">ライセンス情報</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </p>
-  <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg width="24" height="24" viewBox="5.5 5.5 89 89" aria-hidden="true"><rect x="8" y="8" width="84" height="84" fill="none" stroke="#9C9A93" stroke-width="5"/><g fill="#9C9A93"><rect x="37.5" y="27.5" width="8.75" height="20"/><rect x="37.5" y="52.5" width="8.75" height="20"/><rect x="48.75" y="27.5" width="13.75" height="8.75"/><rect x="48.75" y="45.625" width="10" height="8.75"/><rect x="48.75" y="63.75" width="13.75" height="8.75"/></g><rect x="37.5" y="78.5" width="22.5" height="5" fill="#D9452B"/></svg>
+      <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+    </div>
+    <nav class="footer-nav" aria-label="サイト情報">
+      <a href="contact.html">お問い合わせ</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="license.html">ライセンス情報</a>
+    </nav>
+  </div>
 </footer>
 
 </body>

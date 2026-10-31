@@ -15,101 +15,169 @@
 <meta property="og:url" content="https://eidolonia-hi.github.io/">
 <meta property="og:image" content="https://eidolonia-hi.github.io/assets/ogp_1200x630.png">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans+JP:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
 <header class="site-header">
-  <div class="header-inner">
-    <img class="logo" src="assets/e_light.svg" alt="エイドロニア重工 ロゴ">
-    <a class="brand" href="index.html">エイドロニア重工</a>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html">
+      <img src="assets/e_light.svg" width="36" height="36" alt="">
+      <span class="brand-text">
+        <span class="brand-en">EIDOLONIA HEAVY INDUSTRIES</span>
+        <span class="brand-ja">エイドロニア重工</span>
+      </span>
+    </a>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="#product">製品</a>
+      <a href="#spec">動作環境・価格</a>
+      <a href="contact.html">お問い合わせ</a>
+    </nav>
   </div>
 </header>
-<nav class="site-nav">
-  <div class="nav-inner">
-    <a href="index.html" class="active">トップ</a>
-    <a href="tokushoho.html">特定商取引法に基づく表記</a>
-    <a href="privacy.html">プライバシーポリシー</a>
-    <a href="license.html">ライセンス情報</a>
-    <a href="contact.html">お問い合わせ</a>
-  </div>
-</nav>
 
 <main>
 
-  <div class="hero">
-    <img class="hero-logo" src="assets/logo.png" alt="Janus - 重複動画ファインダー アイコン">
-    <div>
-      <h1>Janus - 重複動画ファインダー</h1>
-      <p class="tagline">長さや解像度が違っても、内容で見抜く。ローカル動画の重複検出・整理ツール。</p>
-      <span class="price-badge">980円（税込）・無料体験版あり</span><br>
-      <a class="btn" style="margin:4px 6px 4px 0;" href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store で入手</a>
-      <a class="btn" style="margin:4px 6px 4px 0;" href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH で購入</a>
+  <section class="hero" id="product">
+    <div class="wrap hero-inner">
+      <div>
+        <div class="label-row">
+          <span class="bar bar-28"></span>
+          <p class="label">PRODUCT 01 / WINDOWS APP</p>
+        </div>
+        <div class="product-name">
+          <img class="product-icon" src="assets/logo.png" width="72" height="72" alt="Janus - 重複動画ファインダー アイコン">
+          <div>
+            <h1>Janus</h1>
+            <p class="product-sub">重複動画ファインダー</p>
+          </div>
+        </div>
+        <p class="catch">長さや解像度が違っても、<br>内容で見抜く。</p>
+        <p class="lede">ローカルに保存した動画の中から、中身が同じものを見つけて整理するWindows向けアプリ。解析はすべてPC内で完結します。</p>
+        <p class="facts">
+          <span>¥980（税込）</span><span class="sep">/</span><span>無料体験版あり</span><span class="sep">/</span><span>Windows 11 64bit</span>
+        </p>
+        <div class="btn-row">
+          <a class="btn" href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store で無料体験</a>
+          <a class="btn btn-secondary" href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH で購入</a>
+        </div>
+        <p class="fine-print">無料体験版は Microsoft Store 版のみ。ごみ箱への移動は合計10件まで、解析・確認機能は製品版と同じです。</p>
+      </div>
+      <figure class="frame">
+        <img src="assets/screenshot_main.png" width="1920" height="1032" alt="Janus のメイン画面。解像度や保存形式が違う同じ動画が2本ずつグループにまとめられ、残すファイルをチェックで選べる">
+        <span class="frame-bar"></span>
+      </figure>
     </div>
-  </div>
-
-  <section>
-    <h2>Janus とは</h2>
-    <p>
-      Janus - 重複動画ファインダーは、お使いのPCに保存された動画ファイルの中から
-      「内容が同じ（重複している）動画」を見つけ出し、整理するためのWindows向け
-      デスクトップアプリです。ファイル名やハッシュ値が完全一致するものだけでなく、
-      解像度・ビットレート・保存形式が異なっていても、動画の内容そのものを解析して
-      同一の動画かどうかを判定します。また、フル尺の動画から切り出されたダイジェス
-      ト版・短縮版のような「一部が含まれる」動画の組み合わせも検出できます。
-    </p>
   </section>
 
-  <section>
-    <h2>主な機能</h2>
-    <ul>
-      <li>内容ベースの重複動画検出（画質・保存形式が違っても検出可能）</li>
-      <li>フル版と、そこから切り出したダイジェスト版・短縮版（似ている動画）の検出</li>
-      <li>グループごとに残すファイルにチェックを入れ、チェックのないものだけをごみ箱へ移動</li>
-      <li>画質と長さがほぼ同じ動画では、ビットレートが一番高いファイルに「おすすめ」を表示</li>
-      <li>ごみ箱へ移すのと同時に、残すファイルの名前変更・フォルダ移動が可能</li>
-      <li>「重複ではない」にした組み合わせは次から表示しない（いつでも元に戻せます）</li>
-      <li>整理した記録で、いつ・何を・どう処理したか後から確認可能</li>
-      <li>インターネット通信なし。すべての処理はPC内で完結</li>
-    </ul>
+  <section class="band" aria-label="Janus の強み">
+    <div class="wrap strengths">
+      <div class="strength">
+        <p class="strength-no">01</p>
+        <h2>中身で比べる</h2>
+        <p>ファイル名やハッシュが違っても、解像度・ビットレート・形式が違っても、映像の内容から同じ動画を判定します。</p>
+      </div>
+      <div class="strength">
+        <p class="strength-no">02</p>
+        <h2>切り抜き版も拾う</h2>
+        <p>フル尺の動画と、そこから切り出したダイジェスト・短縮版の組み合わせも候補として検出します。現在のバージョンは数分程度の短い動画向けで、30分以上の動画では見つからないことが多いです。</p>
+      </div>
+      <div class="strength">
+        <p class="strength-no">03</p>
+        <h2>通信しない</h2>
+        <p>インターネット通信は一切行いません。解析も整理も、すべてお使いのPCの中で完結します。</p>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>こんな方におすすめ</h2>
-    <ul>
-      <li>ダウンロードや録画を繰り返して動画フォルダが肥大化してしまった方</li>
-      <li>同じ動画を解像度違いで何本も保存してしまっている方</li>
-      <li>ストレージ容量を整理したいが、どれを消してよいか判断に時間がかかる方</li>
-    </ul>
-    <p>PCでテレビ番組を録画している方は、<a href="tv-recording.html">録画したテレビ番組の重複を整理する方法（TSとMP4の二重保存）</a>もご覧ください。</p>
+  <section class="wrap about">
+    <div>
+      <div class="compare-frames">
+        <figure class="frame">
+          <img src="assets/compare_1080p.png" width="640" height="360" alt="解像度1080pのサンプル動画の同じ場面">
+          <figcaption>動画A 1080p</figcaption>
+        </figure>
+        <figure class="frame">
+          <img src="assets/compare_720p.png" width="640" height="360" alt="解像度720pのサンプル動画の同じ場面">
+          <figcaption>動画B 720p</figcaption>
+        </figure>
+      </div>
+      <div class="same-content"><span class="square"></span><span>SAME CONTENT</span></div>
+    </div>
+    <div class="about-text">
+      <p class="label">ABOUT JANUS</p>
+      <h2>二つの顔を見比べて、<br>同じものを見つける。</h2>
+      <p>Janus は、PCに保存された動画ファイルから内容が重複している動画を見つけ出し、整理するためのデスクトップアプリです。グループごとに残すファイルを選び、不要なものだけをごみ箱へ移動できます。</p>
+    </div>
   </section>
 
-  <section class="card">
-    <h2 style="border:none; padding-left:0; margin-bottom:12px;">動作環境・価格</h2>
-    <table class="spec-table">
-      <tr><th>対応OS</th><td>Windows 11（64bit版）</td></tr>
-      <tr><th>価格</th><td>980円（税込）</td></tr>
-      <tr><th>無料体験版</th><td>Microsoft Store 版にあり（ごみ箱への移動は合計10件まで。解析・確認機能は製品版と同じ）。BOOTH 版は製品版のみです</td></tr>
-      <tr><th>配布元</th><td><a href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store</a>／<a href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH</a>（どちらも同じ製品です。別々の販売のため、一方の購入はもう一方には引き継がれません）</td></tr>
-      <tr><th>通信</th><td>インターネット通信は行いません（詳細は<a href="privacy.html">プライバシーポリシー</a>をご確認ください）</td></tr>
-    </table>
-    <p style="margin-top:20px; display:flex; flex-wrap:wrap; gap:10px;">
-      <a class="btn" href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store で入手</a>
-      <a class="btn" href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH で購入</a>
-    </p>
+  <section class="wrap lists" aria-label="機能とおすすめ">
+    <div>
+      <h2 class="list-heading">整理のための機能</h2>
+      <ul class="rule-list">
+        <li><span class="square"></span><span>残すファイルを選んで、不要なものだけごみ箱へ</span></li>
+        <li><span class="square"></span><span>削除と同時に、残すファイルの名前変更・フォルダ移動</span></li>
+        <li><span class="square"></span><span>重複扱いしたくない組み合わせは次から表示しない（いつでも戻せます）</span></li>
+        <li><span class="square"></span><span>いつ・何を・どう処理したかを整理した記録で確認</span></li>
+      </ul>
+    </div>
+    <div>
+      <h2 class="list-heading">こんな方に</h2>
+      <ul class="rule-list">
+        <li>ダウンロードや録画を繰り返して、動画フォルダが肥大化した</li>
+        <li>同じ動画を解像度違いで何本も保存してしまっている</li>
+        <li>容量を空けたいが、どれを消していいか判断に時間がかかる</li>
+      </ul>
+      <p class="list-note">PCでテレビ番組を録画している方は、<a href="tv-recording.html">録画したテレビ番組の重複を整理する方法（TSとMP4の二重保存）</a>もご覧ください。</p>
+    </div>
+  </section>
+
+  <section class="band" id="spec">
+    <div class="wrap spec-inner">
+      <div>
+        <p class="label">SPECIFICATIONS</p>
+        <h2>動作環境・価格</h2>
+      </div>
+      <div>
+        <dl class="spec-list">
+          <div class="spec-row"><dt>対応OS</dt><dd>Windows 11（64bit版）</dd></div>
+          <div class="spec-row"><dt>価格</dt><dd>980円（税込）</dd></div>
+          <div class="spec-row"><dt>無料体験版</dt><dd>Microsoft Store 版のみ（ごみ箱への移動は合計10件まで）</dd></div>
+          <div class="spec-row"><dt>配布元</dt><dd><a href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store</a> ／ <a href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH</a></dd></div>
+          <div class="spec-row"><dt>通信</dt><dd>行いません（<a href="privacy.html">プライバシーポリシー</a>）</dd></div>
+        </dl>
+        <p class="spec-note">※ Microsoft Store 版と BOOTH 版は同じ製品ですが、別々の販売のため、一方の購入はもう一方には引き継がれません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap closing">
+    <span class="bar bar-48"></span>
+    <h2>まずは体験版で、<br>自分の動画フォルダを解析してみる。</h2>
+    <div class="btn-row">
+      <a class="btn" href="https://apps.microsoft.com/detail/9PHZ2T339R2P" target="_blank" rel="noopener">Microsoft Store で無料体験</a>
+      <a class="btn btn-secondary" href="https://eidolonia-hi.booth.pm/items/8967915" target="_blank" rel="noopener">BOOTH で購入</a>
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  <p>
-    <a href="index.html">トップ</a> |
-    <a href="tokushoho.html">特定商取引法に基づく表記</a> |
-    <a href="privacy.html">プライバシーポリシー</a> |
-    <a href="license.html">ライセンス情報</a> |
-    <a href="contact.html">お問い合わせ</a>
-  </p>
-  <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg width="24" height="24" viewBox="5.5 5.5 89 89" aria-hidden="true"><rect x="8" y="8" width="84" height="84" fill="none" stroke="#9C9A93" stroke-width="5"/><g fill="#9C9A93"><rect x="37.5" y="27.5" width="8.75" height="20"/><rect x="37.5" y="52.5" width="8.75" height="20"/><rect x="48.75" y="27.5" width="13.75" height="8.75"/><rect x="48.75" y="45.625" width="10" height="8.75"/><rect x="48.75" y="63.75" width="13.75" height="8.75"/></g><rect x="37.5" y="78.5" width="22.5" height="5" fill="#D9452B"/></svg>
+      <p>&copy; 2026 エイドロニア重工（Eidolonia Heavy Industries）</p>
+    </div>
+    <nav class="footer-nav" aria-label="サイト情報">
+      <a href="contact.html">お問い合わせ</a>
+      <a href="tokushoho.html">特定商取引法に基づく表記</a>
+      <a href="privacy.html">プライバシーポリシー</a>
+      <a href="license.html">ライセンス情報</a>
+    </nav>
+  </div>
 </footer>
 
 </body>
